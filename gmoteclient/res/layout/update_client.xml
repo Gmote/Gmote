@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:gravity="center">
+	
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/updatePhoneText"
+		android:keepScreenOn="false"
+		android:padding="20px" android:textAppearance="?android:attr/textAppearanceMedium" android:text="The Gmote application that is on your phone is out of date and is incompatible with the Gmote server.\n\nA newer version of the client is available on the Android Market.\n\nClick 'OK' to update the client now."></TextView>
+
+
+
+</LinearLayout>

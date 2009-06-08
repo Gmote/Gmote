@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:alphabeticShortcut="v" android:title="View Settings" android:id="@+id/menui_browse_settings" android:icon="@drawable/preferences"></item>
+</menu>

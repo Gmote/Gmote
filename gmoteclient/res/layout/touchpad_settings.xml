@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center" android:id="@+id/touchpad_settings_view">
+    
+
+
+
+
+<TextView android:id="@+id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mouse Sensitivity"></TextView>
+
+<SeekBar android:layout_height="wrap_content" android:layout_width="wrap_content" android:minWidth="200px" android:id="@+id/mouse_sensitivity_seek" android:max="100" android:progress="50" android:layout_marginBottom="20px"></SeekBar>
+
+<TextView android:id="@+id/TextView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mouse Acceleration"></TextView>
+
+<SeekBar android:layout_height="wrap_content" android:layout_width="wrap_content" android:minWidth="200px" android:id="@+id/mouse_acceleration_seek" android:max="100" android:progress="50" android:layout_marginBottom="20px"></SeekBar>
+
+<TableLayout android:id="@+id/TableLayout01" android:layout_width="wrap_content" android:layout_height="wrap_content"><TableRow android:id="@+id/TableRow01" android:layout_width="wrap_content" android:layout_height="wrap_content"><Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ok" android:id="@+id/touchpad_settings_ok" android:minWidth="70px"></Button>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Defaults" android:id="@+id/touchpad_settings_defaults"></Button>
+</TableRow>
+</TableLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+	
+	<LinearLayout android:layout_height="wrap_content" android:id="@+id/file_list_title_layout" android:layout_width="fill_parent"><TextView android:layout_height="wrap_content" android:id="@+id/file_list_title" android:layout_width="fill_parent" android:textStyle="bold" android:textColor="#FFFFFF" android:text="Browse" android:background="#999999" android:paddingLeft="5px" android:paddingBottom="2px" android:paddingTop="2px" android:shadowColor="#000000" android:singleLine="true"></TextView>
+</LinearLayout><LinearLayout android:layout_height="wrap_content" android:orientation="horizontal" android:id="@+id/file_list_top_layout" android:layout_width="fill_parent" android:paddingLeft="5px"><TextView android:layout_width="wrap_content" android:text="Play on:" android:layout_height="fill_parent" android:gravity="center_vertical" android:textSize="16px" android:id="@+id/txt_play_on" android:textColor="#FFFFFF" android:textStyle="bold"></TextView><RadioGroup android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:id="@+id/radio_group_play_on"><RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Computer" android:id="@+id/radio_play_on_computer" android:checked="false"></RadioButton>
+<RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone (beta)" android:id="@+id/radio_play_on_phone" android:checked="false"></RadioButton>
+
+</RadioGroup>
+
+</LinearLayout><TextView android:layout_height="wrap_content" android:id="@+id/browse_top_textview" android:layout_width="fill_parent"></TextView><FrameLayout android:layout_height="wrap_content" android:minHeight="1px" android:layout_width="fill_parent" android:background="#999999" android:id="@+id/file_list_separator"></FrameLayout><ListView android:id="@android:id/list" android:layout_width="fill_parent"
+		android:layout_height="wrap_content"></ListView>
+	<TextView android:id="@android:id/empty" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/no_files" />
+
+
+
+
+</LinearLayout>

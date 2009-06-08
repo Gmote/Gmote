@@ -1,0 +1,11 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/text_view_layout" android:layout_height="fill_parent"
+	android:layout_width="fill_parent" android:scrollbars="vertical">
+	
+
+<ScrollView android:paddingBottom="10px" android:paddingLeft="10px" android:paddingRight="10px" android:paddingTop="10px" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/alert_dialog_scrollview"><TextView android:layout_width="wrap_content" android:id="@+id/alert_text_view"
+		android:autoLink="all" android:editable="false"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_height="fill_parent" android:focusableInTouchMode="false" android:focusable="false"
+		android:clickable="false" android:scrollbars="vertical" android:enabled="true"></TextView></ScrollView>
+</LinearLayout>

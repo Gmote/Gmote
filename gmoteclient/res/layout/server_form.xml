@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView 
+        android:id="@+id/server_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:text="IP"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+    <TextView android:id="@+id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dip" android:layout_marginRight="20dip" android:textAppearance="?android:attr/textAppearanceSmall" android:text="(Right click on the GmoteServer icon on your computer, and select 'help', 'show local ip address')"></TextView><EditText
+        android:id="@+id/server_edit"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:scrollHorizontally="true"
+        android:autoText="false"
+        android:capitalize="none"
+        android:gravity="fill_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="192.168.1.100"
+        android:singleLine="true"
+        android:selectAllOnFocus="true" />
+
+    <TextView
+        android:id="@+id/port_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium" android:text="TCP Port (optional)"/>
+            
+    <EditText
+        android:id="@+id/port_edit"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:scrollHorizontally="true"
+        android:autoText="false"
+        android:capitalize="none"
+        android:gravity="fill_horizontal"
+        android:hint="8889"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" /><TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="20dip" android:layout_marginRight="20dip" android:gravity="left" android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/udp_port_label" android:text="UDP Port (optional)"/><EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_marginLeft="20dip" android:layout_marginRight="20dip" android:scrollHorizontally="true" android:autoText="false" android:capitalize="none" android:gravity="fill_horizontal" android:singleLine="true" android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/udp_port_edit" android:hint="9901"/>
+        
+
+</LinearLayout>

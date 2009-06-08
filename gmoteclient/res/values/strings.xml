@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gmote</string>
+    
+    <!-- File -->
+    <string name="no_files">"Gmote did not find any media files here."</string>
+    <string name="current_path">"org.gmote.browse.Path"</string>
+    <string name="file_type">"org.gmote.control.type"</string>
+    
+    <!-- Connection -->
+    <string name="attempting_connection">Attempting connection...</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Gmote disconnected.</string>
+    
+    <!-- Welcome screen -->
+    <string name="welcome_header">Welcome!</string>
+    <string name="welcome_message">On your <b>computer</b>, go to: 
+    </string>
+    <string name="welcome_continue">I have installed the Server. Start Gmote!</string>
+    <string name="gmote_stream_mode">org.gmote.browse.GmoteSyncMode</string>
+<string name="gmote_stream_playlist">org.gmote.browse.GmoteStreamPlaylist</string>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/media_view"
+  android:layout_width="fill_parent" android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="#a0000000"
+  android:layout_margin="0dp"
+   >
+  <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="#a0000000"
+  android:orientation="horizontal" >
+    <Button android:id="@+id/browse"
+      android:scaleType="centerInside"
+      android:layout_width="wrap_content"
+      android:layout_height="64dp" android:text="Browse" android:textColor="#fff" android:textStyle="bold"
+      android:background="@drawable/dreamote_btn"
+       />
+     
+    <ImageButton android:id="@+id/close" android:tag="CLOSE"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+			android:layout_alignParentRight="true" 
+      android:src="@+drawable/close"
+      android:background="@drawable/dreamote_btn"
+    />
+ </RelativeLayout>
+
+	<RelativeLayout android:gravity="center" android:background="#a0000000"
+    android:layout_width="fill_parent" android:layout_height="350dp">
+    
+    <ImageButton android:id="@+id/play" android:tag="PLAY"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+			android:layout_centerInParent="true"
+			android:src="@+drawable/play"
+
+            android:layout_margin = "15dp"
+            android:background="@drawable/dreamote_btn"
+            
+       />
+
+    <ImageButton android:id="@+id/stop" android:tag="STOP"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+			android:layout_above="@id/play"
+			android:layout_alignLeft="@id/play"
+      android:src="@+drawable/stop"
+      android:background="@drawable/dreamote_btn"
+
+            
+    />
+
+    <ImageButton
+      android:id="@+id/rewind"
+      android:tag="REWIND"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_toLeftOf="@id/play"
+      android:layout_alignTop="@id/play"
+      android:src="@+drawable/rewind"
+      android:background="@drawable/dreamote_btn"
+      android:longClickable="true"
+       />
+
+    <ImageButton android:id="@+id/fast_forward" android:tag="FAST_FORWARD"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_toRightOf="@id/play"
+			android:layout_alignTop="@id/play"
+      android:src="@+drawable/fast_forward"
+      android:background="@drawable/dreamote_btn"
+      android:longClickable="true"
+            
+    />
+
+    <ImageButton android:id="@+id/pause" android:tag="PAUSE"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_below="@id/play"
+			android:layout_alignLeft="@id/play"
+      android:layout_marginBottom = "20dp"
+      android:src="@+drawable/pause" 
+      android:background="@drawable/dreamote_btn"
+
+    />
+
+
+
+    <ImageButton android:id="@+id/volume_down" android:tag="VOLUME_DOWN"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_below="@id/pause"
+      android:layout_alignLeft="@id/play"
+      android:src="@+drawable/volume_down"
+      android:background="@drawable/dreamote_btn"
+    />
+
+    <ImageButton android:id="@+id/mute" android:tag="MUTE"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_toLeftOf="@id/volume_down"
+      android:layout_alignTop="@id/volume_down"
+      android:src="@+drawable/mute"   
+      android:background="@drawable/dreamote_btn"  
+    />
+    
+    <ImageButton android:id="@+id/volume_up" android:tag="VOLUME_UP"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_toRightOf="@id/volume_down"
+			android:layout_alignTop="@id/volume_down"
+      android:src="@+drawable/volume_up"
+      android:background="@drawable/dreamote_btn"
+
+    />
+    
+	</RelativeLayout>
+</LinearLayout>

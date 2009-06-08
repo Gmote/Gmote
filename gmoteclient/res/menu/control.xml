@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menui_browse"
+        android:title="Browse"
+        android:alphabeticShortcut="b"
+        android:icon="@drawable/browse" />
+
+    <item android:id="@+id/menui_remote_control"
+        android:title="Remote"
+        android:alphabeticShortcut="r"
+        android:icon="@drawable/remote_control" />
+
+    <item android:id="@+id/menui_touchpad"
+        android:title="Touchpad"
+        android:alphabeticShortcut="t"
+        android:icon="@drawable/compass" />
+        
+    <item android:title="Web (beta)" android:id="@+id/menui_web_browser" android:icon="@drawable/menu_web_browser"></item>
+        
+    <item android:id="@+id/menui_help" 
+    	android:alphabeticShortcut="h"
+    	android:title="Help"
+    	android:icon="@drawable/menu_help" />
+
+    <item android:id="@+id/menui_settings"
+        android:title="Find Server"
+        android:alphabeticShortcut="s"
+        android:icon="@drawable/preferences" />
+    
+    <item android:id="@+id/menui_remotedesktop"
+        android:title="RemoteDesk"
+        android:alphabeticShortcut="m"
+        android:icon="@drawable/preferences" />
+
+</menu>

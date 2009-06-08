@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/web_browser"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+  <LinearLayout android:layout_height="wrap_content" android:orientation="horizontal" android:id="@+id/web_browser_top_layout" android:layout_width="fill_parent">
+    <EditText
+        android:id="@+id/web_browser_url"
+        android:layout_height="wrap_content"
+        android:scrollHorizontally="true"
+        android:capitalize="none"
+        android:hint="url"
+        android:singleLine="true"
+        android:selectAllOnFocus="true"
+        android:gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:layout_weight="10"/>
+        
+        
+    <Button android:layout_width="wrap_content" android:layout_height="fill_parent" android:gravity="center_vertical" android:id="@+id/web_browser_go" android:text="go" android:textAppearance="?android:attr/textAppearanceSmall" />
+    <ProgressBar android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    <Button android:layout_width="wrap_content" android:layout_height="fill_parent" android:gravity="center_vertical" android:id="@+id/web_browser_launch" android:text="open on computer"  android:textAppearance="?android:attr/textAppearanceSmall"/>
+  </LinearLayout>
+  
+  <WebView android:id="@+id/web_browser_view"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:clickable="true"
+            android:longClickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+   </LinearLayout>
+	<LinearLayout android:id="@+id/web_browser_zoom" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true" /> 
+</RelativeLayout>
