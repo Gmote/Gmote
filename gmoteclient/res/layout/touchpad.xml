@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<org.gmote.client.android.TouchpadLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id = "@+id/touchpad"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    >
+    
 
+    <ImageButton android:id="@+id/keyboard"
+      android:scaleType="centerInside"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_alignParentRight="true" 
+      android:src="@+drawable/keyboard"
+      android:background="@drawable/dreamote_btn"
+    />
+
+  
+  <LinearLayout android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:gravity="center">
+      
       <ImageView
             android:src="@drawable/gmote_touch_flat"
             android:adjustViewBounds="true"
@@ -14,5 +29,7 @@
             android:layout_height="wrap_content"
             android:tint="#99000000"
              />
+  </LinearLayout>
 
-</LinearLayout>
+      
+</org.gmote.client.android.TouchpadLayout>
