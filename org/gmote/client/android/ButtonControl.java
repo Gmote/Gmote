@@ -90,27 +90,8 @@ public class ButtonControl extends Activity implements BaseActivity {
     mUtil = new ActivityUtil();
     mUtil.onCreate(icicle, this);
 
-    Intent intent = getIntent();
-    fileInfo = (FileInfo) intent
-        .getSerializableExtra(getString(R.string.file_type));
-    
-    if (fileInfo != null) {
-      boolean inSyncMode = intent.getBooleanExtra(getString(R.string.gmote_stream_mode), false);
-
-      if (inSyncMode) {
-        ListReplyPacket reply = (ListReplyPacket) intent.getSerializableExtra(getString(R.string.gmote_stream_playlist));
-        FileInfo[] playList = reply.getFiles();
-        startGmoteSyncMode(fileInfo, playList);
-      } else {
-        if (inMediaPlayerMode) {
-          if (mediaPlayer != null) {
-            mediaPlayer.handleCommand(Command.STOP);
-          }
-        }
-        inMediaPlayerMode = false;
-        mUtil.send(new RunFileReqPacket(fileInfo));
-      }
-    }
+    //refactored below
+    setMode();
 
     /*
      * uncomment this section to support different views based on file type
@@ -122,7 +103,32 @@ public class ButtonControl extends Activity implements BaseActivity {
      */
   }
 
-  private void startGmoteSyncMode(FileInfo fileInfo, FileInfo[] playList) {
+  private void setMode() {
+	  //determines whether to use stream mode or media player mode based on the intent 
+	  Intent intent = getIntent();
+	    fileInfo = (FileInfo) intent
+	        .getSerializableExtra(getString(R.string.file_type));
+	    
+	    if (fileInfo != null) {
+	      boolean inSyncMode = intent.getBooleanExtra(getString(R.string.gmote_stream_mode), false);
+
+	      if (inSyncMode) {
+	        ListReplyPacket reply = (ListReplyPacket) intent.getSerializableExtra(getString(R.string.gmote_stream_playlist));
+	        FileInfo[] playList = reply.getFiles();
+	        startGmoteSyncMode(fileInfo, playList);
+	      } else {
+	        if (inMediaPlayerMode) {
+	          if (mediaPlayer != null) {
+	            mediaPlayer.handleCommand(Command.STOP);
+	          }
+	        }
+	        inMediaPlayerMode = false;
+	        mUtil.send(new RunFileReqPacket(fileInfo));
+	      }
+	    }
+}
+
+private void startGmoteSyncMode(FileInfo fileInfo, FileInfo[] playList) {
 
     Remote remoteInstance = Remote.getInstance();
     String serverUrl = remoteInstance.getServerIp() + ":" + remoteInstance.getServerPort() + "/";
@@ -390,10 +396,22 @@ public class ButtonControl extends Activity implements BaseActivity {
     public void onClick(View v) {
       Log.d(ActivityUtil.DEBUG_TAG, "ButtonControl# clicked Browse");
       Intent intent = new Intent(ButtonControl.this, Browse.class);
-      startActivity(intent);
+      startActivityForResult(intent, 0);
     }
 
   };
+  protected void onActivityResult(int requestCode, int resultCode,
+          Intent data) {
+	  //TODO: interpret the Browse intent
+	  if (requestCode == 0){
+		  if (resultCode == Activity.RESULT_OK) {
+	          if (resultCode == RESULT_OK) {
+	        	  this.setIntent(data);
+	        	  setMode();
+	          }
+	      }
+	  }
+  }
 
   View.OnClickListener mListener = new OnClickListener() {
     public void onClick(View v) {

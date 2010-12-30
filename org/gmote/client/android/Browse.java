@@ -31,6 +31,7 @@ import org.gmote.common.packet.ListReplyPacket;
 import org.gmote.common.packet.ListReqPacket;
 import org.gmote.common.packet.SimplePacket;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ListActivity;
@@ -226,7 +227,7 @@ public class Browse extends ListActivity implements BaseActivity, RadioGroup.OnC
     if (file.isDirectory()) {
       Intent intent = new Intent(this, Browse.class);
       intent.putExtra(getString(R.string.current_path), file);
-      startActivity(intent);
+      startActivityForResult(intent, 0);
     } else if (file.isControllable()) {
       // start the remote control
       Intent intent = new Intent(this, ButtonControl.class);
@@ -238,12 +239,23 @@ public class Browse extends ListActivity implements BaseActivity, RadioGroup.OnC
       }
       
       intent.putExtra(getString(R.string.gmote_stream_mode), inGmoteStreamMode);
-      startActivity(intent);
+      setResult(Activity.RESULT_OK, intent);
+      finish();
     } else {
       Toast.makeText(Browse.this,
           "I don't know that to do with this file.",
           Toast.LENGTH_SHORT).show();
     }
+  }
+  protected void onActivityResult(int requestCode, int resultCode,
+          Intent data) {
+	  //TODO: test passing the intent
+	  if (resultCode == Activity.RESULT_OK) {
+          if (resultCode == RESULT_OK) {
+        	  setResult(Activity.RESULT_OK, data);
+              finish();
+          }
+      }
   }
 
   private boolean gmoteStreamIsChecked() {
