@@ -232,7 +232,7 @@ public class Browse extends ListActivity implements BaseActivity, RadioGroup.OnC
       
       //saves the last browsed directory
       SharedPreferences.Editor editor = getSharedPreferences(GmoteClient.PREFS, MODE_WORLD_WRITEABLE).edit();
-      editor.putString(GmoteClient.KEY_LAST_BROWSE_DIR, getString(R.string.current_path));
+      editor.putString(GmoteClient.KEY_LAST_BROWSE_DIR, this.getIntent().getStringExtra(getString(R.string.current_path)));
       editor.commit();
     	
       // start the remote control
