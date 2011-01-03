@@ -42,6 +42,7 @@ public class GmoteClient extends Activity {
   static final String KEY_UDP_PORT = "udpport";
   static final String KEY_IN_STREAM_MODE = "stream_mode";
   static final String KEY_IS_MANUAL_IP = "is_manual_ip";
+  static final String KEY_LAST_BROWSE_DIR = "last_browse_dir";
   
   /** Called when the activity is first created. */
   @Override
@@ -52,7 +53,7 @@ public class GmoteClient extends Activity {
     String appVersion = getVersionNumber();
     Log.w(DEBUG_TAG, "ManifestVersion: " + appVersion + " ClientVersion" + Remote.GMOTE_CLIENT_VERSION);
     if (!Remote.GMOTE_CLIENT_VERSION.equalsIgnoreCase(appVersion)) {
-      Log.w(DEBUG_TAG, "Manifest version doesn't match APP_VERSION. These two version numbers should always be in sync. Please update the approprivate value.");
+      Log.w(DEBUG_TAG, "Manifest version doesn't match APP_VERSION. These two version numbers should always be in sync. Please update the appropriate value.");
     }
     
     SharedPreferences prefs = getSharedPreferences(PREFS, MODE_WORLD_WRITEABLE);

@@ -229,6 +229,12 @@ public class Browse extends ListActivity implements BaseActivity, RadioGroup.OnC
       intent.putExtra(getString(R.string.current_path), file);
       startActivityForResult(intent, 0);
     } else if (file.isControllable()) {
+      
+      //saves the last browsed directory
+      SharedPreferences.Editor editor = getSharedPreferences(GmoteClient.PREFS, MODE_WORLD_WRITEABLE).edit();
+      editor.putString(GmoteClient.KEY_LAST_BROWSE_DIR, getString(R.string.current_path));
+      editor.commit();
+    	
       // start the remote control
       Intent intent = new Intent(this, ButtonControl.class);
       intent.putExtra(getString(R.string.file_type), file);
