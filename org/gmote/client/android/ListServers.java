@@ -189,9 +189,9 @@ public class ListServers extends ListActivity {
   }
 
   void startController() {
-    Intent intent = new Intent();
-    intent.setClass(ListServers.this, ButtonControl.class);
-    startActivity(intent);
+    //Intent intent = new Intent();
+    //intent.setClass(ListServers.this, ButtonControl.class);
+    //startActivity(intent);
     finish();
   }
 

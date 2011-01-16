@@ -73,7 +73,8 @@ public class GmoteClient extends Activity {
       
       continueButton.setOnClickListener(new OnClickListener() {
           public void onClick(View v) {
-              listServers();
+        	  startController();
+        	  listServers();
           }
       });
       
