@@ -53,6 +53,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -253,6 +254,12 @@ private void startGmoteSyncMode(FileInfo fileInfo, FileInfo[] playList) {
     Log.i(DEBUG_TAG, "ButtonControl: onResume()");
     mUtil.onResume();
     
+    //sets the current server for the browse button, if the button is present
+    Button browse = (Button)findViewById(R.id.browse);
+    if(browse!=null){
+    	browse.setText("Browse "+Remote.getInstance().getServerString());
+    }
+    
     if (inMediaPlayerMode && mediaPlayer != null) {  
       mediaPlayer.setMediaPlayerListener(localMediaPlayerListener);
       if (localMediaPlayerListener != null) {
@@ -319,7 +326,8 @@ private void startGmoteSyncMode(FileInfo fileInfo, FileInfo[] playList) {
       }
     }
 
-    View browse = findViewById(R.id.browse);
+    Button browse = (Button)findViewById(R.id.browse);
+    browse.setText("Browse "+Remote.getInstance().getServerString());
     browse.setOnClickListener(mBrowseListener);
 
     LayoutInflater factory = LayoutInflater.from(this);
